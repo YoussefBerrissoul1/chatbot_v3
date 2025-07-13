@@ -1,0 +1,14 @@
+{
+  "questions": [
+    {
+      "question": "Où trouver mes fiches de paie?",
+      "theme_detecte": "bulletins_de_paie_et_salaires",
+      "timestamp": "2025-07-13 16:09:10"
+    },
+    {
+      "question": "help",
+      "theme_detecte": "depart_de_l_entreprise",
+      "timestamp": "2025-07-13 16:16:14"
+    }
+  ]
+}
