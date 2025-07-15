@@ -1,5 +1,5 @@
 """
-Version ASCII-safe du chatbot pour éviter les problèmes d'encodage
+Version sécurisée du chatbot avec gestion des variables d'environnement
 """
 
 import json
@@ -15,6 +15,10 @@ import re
 from datetime import datetime
 from typing import Dict, List, Tuple, Optional
 import unicodedata
+from dotenv import load_dotenv
+
+# Charger les variables d'environnement
+load_dotenv()
 
 # Import conditionnel du correcteur orthographique
 try:
@@ -60,23 +64,31 @@ def safe_encode_text(text: str) -> str:
 
 class ChatbotRHOptimise:
     """
-    Chatbot RH optimisé avec gestion ASCII-safe
+    Chatbot RH optimisé avec gestion sécurisée des variables d'environnement
     """
     
-    def __init__(self, data_path: str = "data/Nestle-HR-FAQ.json"):
-        self.data_path = data_path
-        self.seuil_confiance = 1.0
+    def __init__(self, data_path: str = None):
+        # Configuration depuis les variables d'environnement
+        self.data_path = data_path or os.getenv("DATA_PATH", "data/Nestle-HR-FAQ.json")
+        self.seuil_confiance = float(os.getenv("CONFIDENCE_THRESHOLD", "1.0"))
+        
+        # Configuration du vectorizer depuis l'environnement
         self.vectorizer = TfidfVectorizer(
-            max_features=5000,
-            ngram_range=(1, 2),
+            max_features=int(os.getenv("TFIDF_MAX_FEATURES", "5000")),
+            ngram_range=(1, int(os.getenv("TFIDF_NGRAM_RANGE", "2"))),
             stop_words=None,
             lowercase=True,
-            min_df=1,
-            max_df=0.95
+            min_df=int(os.getenv("TFIDF_MIN_DF", "1")),
+            max_df=float(os.getenv("TFIDF_MAX_DF", "0.95"))
         )
+        
+        # Configuration du classifier depuis l'environnement
         self.classifier = Pipeline([
-            ('tfidf', TfidfVectorizer(max_features=3000, ngram_range=(1, 2))),
-            ('nb', MultinomialNB(alpha=0.1))
+            ('tfidf', TfidfVectorizer(
+                max_features=int(os.getenv("CLASSIFIER_MAX_FEATURES", "3000")), 
+                ngram_range=(1, int(os.getenv("CLASSIFIER_NGRAM_RANGE", "2")))
+            )),
+            ('nb', MultinomialNB(alpha=float(os.getenv("NAIVE_BAYES_ALPHA", "0.1"))))
         ])
         
         # Données
@@ -93,12 +105,26 @@ class ChatbotRHOptimise:
             "questions_incomprises": 0
         }
         
-        # Configuration OpenAI
+        # Configuration OpenAI sécurisée
+        self._initialiser_client_openai()
+    
+    def _initialiser_client_openai(self):
+        """Initialise le client OpenAI avec les variables d'environnement"""
         try:
+            api_key = os.getenv("OPENAI_API_KEY")
+            base_url = os.getenv("OPENAI_BASE_URL", "https://openrouter.ai/api/v1")
+            
+            if not api_key:
+                print("⚠️ Clé API OpenAI manquante dans le fichier .env")
+                self.client = None
+                return
+            
             self.client = OpenAI(
-                base_url="https://openrouter.ai/api/v1",
-                api_key="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"
+                base_url=base_url,
+                api_key=api_key
             )
+            print("✅ Client OpenAI initialisé avec succès")
+            
         except Exception as e:
             print(f"⚠️ Erreur lors de l'initialisation du client OpenAI: {e}")
             self.client = None
@@ -121,6 +147,9 @@ class ChatbotRHOptimise:
         """Charge les données FAQ depuis le fichier JSON"""
         print("📂 Chargement des données FAQ...")
         try:
+            if not os.path.exists(self.data_path):
+                raise FileNotFoundError(f"Fichier de données non trouvé: {self.data_path}")
+            
             with open(self.data_path, 'r', encoding='utf-8') as f:
                 data = json.load(f)
             
@@ -201,30 +230,45 @@ class ChatbotRHOptimise:
             # Appel à l'API OpenRouter avec encodage ASCII-safe
             if not self.client:
                 self.stats["questions_incomprises"] += 1
-                return "❌ Service d'IA indisponible. Veuillez reformuler votre question."
+                return "❌ Service d'IA indisponible. Veuillez vérifier votre configuration."
             
             try:
                 # Convertir la question en ASCII-safe
                 question_ascii = safe_encode_text(question_corrigee)
-                print(f"DEBUG: Question ASCII-safe: {repr(question_ascii)}")
+                
+                # Configuration du modèle depuis l'environnement
+                model_name = os.getenv("OPENAI_MODEL", "openai/gpt-4o")
+                max_tokens = int(os.getenv("OPENAI_MAX_TOKENS", "300"))
+                temperature = float(os.getenv("OPENAI_TEMPERATURE", "0.7"))
+                
+                # Message système configurable
+                system_message = os.getenv(
+                    "SYSTEM_MESSAGE", 
+                    "You are an HR assistant for Nestle. Answer in French in a professional and helpful manner. Limit your response to 200 words maximum."
+                )
+                
+                if os.getenv("DEBUG", "false").lower() == "true":
+                    print(f"DEBUG: Question ASCII-safe: {repr(question_ascii)}")
+                    print(f"DEBUG: Modèle utilisé: {model_name}")
                 
                 completion = self.client.chat.completions.create(
-                    model="openai/gpt-4o",
+                    model=model_name,
                     messages=[
                         {
                             "role": "system",
-                            "content": "You are an HR assistant for Nestle. Answer in French in a professional and helpful manner. Limit your response to 200 words maximum."
+                            "content": system_message
                         },
                         {
                             "role": "user",
                             "content": question_ascii
                         }
                     ],
-                    max_tokens=300,
-                    temperature=0.7
+                    max_tokens=max_tokens,
+                    temperature=temperature
                 )
                 
-                print("DEBUG: Réponse reçue de l'API")
+                if os.getenv("DEBUG", "false").lower() == "true":
+                    print("DEBUG: Réponse reçue de l'API")
                 
                 ai_answer = completion.choices[0].message.content
                 if ai_answer:
@@ -235,34 +279,43 @@ class ChatbotRHOptimise:
                     return "❌ Réponse vide de l'IA. Veuillez reformuler votre question."
                     
             except Exception as e:
-                print(f"❌ Erreur API: {str(e)}")
+                if os.getenv("DEBUG", "false").lower() == "true":
+                    print(f"❌ Erreur API détaillée: {str(e)}")
+                else:
+                    print(f"❌ Erreur API: {str(e)}")
                 self.stats["questions_incomprises"] += 1
                 return "❌ Service temporairement indisponible. Veuillez réessayer plus tard."
     
     def sauvegarder_modeles(self) -> None:
         """Sauvegarde les modèles entraînés"""
-        os.makedirs("model", exist_ok=True)
-        with open("model/vectorizer.pkl", 'wb') as f:
-            pickle.dump(self.vectorizer, f)
-        with open("model/classifier.pkl", 'wb') as f:
-            pickle.dump(self.classifier, f)
-        with open("model/chatbot_data.pkl", 'wb') as f:
-            pickle.dump({
-                'questions': self.questions,
-                'reponses': self.reponses,
-                'themes': self.themes,
-                'tfidf_matrix': self.tfidf_matrix
-            }, f)
-        print("💾 Modèles sauvegardés avec succès")
+        model_dir = os.getenv("MODEL_DIR", "model")
+        os.makedirs(model_dir, exist_ok=True)
+        
+        try:
+            with open(f"{model_dir}/vectorizer.pkl", 'wb') as f:
+                pickle.dump(self.vectorizer, f)
+            with open(f"{model_dir}/classifier.pkl", 'wb') as f:
+                pickle.dump(self.classifier, f)
+            with open(f"{model_dir}/chatbot_data.pkl", 'wb') as f:
+                pickle.dump({
+                    'questions': self.questions,
+                    'reponses': self.reponses,
+                    'themes': self.themes,
+                    'tfidf_matrix': self.tfidf_matrix
+                }, f)
+            print("💾 Modèles sauvegardés avec succès")
+        except Exception as e:
+            print(f"❌ Erreur lors de la sauvegarde: {e}")
     
     def charger_modeles(self) -> bool:
         """Charge les modèles sauvegardés"""
+        model_dir = os.getenv("MODEL_DIR", "model")
         try:
-            with open("model/vectorizer.pkl", 'rb') as f:
+            with open(f"{model_dir}/vectorizer.pkl", 'rb') as f:
                 self.vectorizer = pickle.load(f)
-            with open("model/classifier.pkl", 'rb') as f:
+            with open(f"{model_dir}/classifier.pkl", 'rb') as f:
                 self.classifier = pickle.load(f)
-            with open("model/chatbot_data.pkl", 'rb') as f:
+            with open(f"{model_dir}/chatbot_data.pkl", 'rb') as f:
                 data = pickle.load(f)
                 self.questions = data['questions']
                 self.reponses = data['reponses']
@@ -271,15 +324,22 @@ class ChatbotRHOptimise:
             print("✅ Modèles chargés depuis le cache")
             return True
         except Exception as e:
-            print(f"⚠️ Impossible de charger les modèles depuis le cache : {e}")
+            if os.getenv("DEBUG", "false").lower() == "true":
+                print(f"⚠️ Impossible de charger les modèles depuis le cache : {e}")
             return False
     
     def initialiser(self, force_retrain: bool = False) -> None:
         """Initialise le chatbot"""
         print("🚀 Initialisation du Chatbot RH Nestlé...")
+        
+        # Vérifier les variables d'environnement critiques
+        if not os.getenv("OPENAI_API_KEY"):
+            print("⚠️ ATTENTION: Clé API OpenAI manquante dans le fichier .env")
+        
         if not force_retrain and self.charger_modeles():
             print("✅ Chatbot initialisé avec les modèles sauvegardés")
             return
+        
         self.charger_donnees()
         self.entrainer_modeles()
         self.sauvegarder_modeles()
@@ -297,8 +357,9 @@ class ChatbotRHOptimise:
     
     def executer(self) -> None:
         """Lance la boucle interactive du chatbot"""
-        print("\n💬 Chatbot RH Nestlé - Version ASCII-Safe")
+        print("\n💬 Chatbot RH Nestlé - Version Sécurisée")
         print("   Tapez 'exit', 'quit' pour quitter\n")
+        
         while True:
             try:
                 question = input("Vous: ").strip()
@@ -322,6 +383,11 @@ class ChatbotRHOptimise:
 def main():
     """Point d'entrée principal"""
     try:
+        # Vérifier si le fichier .env existe
+        if not os.path.exists('.env'):
+            print("❌ Fichier .env manquant. Veuillez le créer avec les variables requises.")
+            return
+        
         chatbot = ChatbotRHOptimise()
         chatbot.initialiser()
         chatbot.executer()
