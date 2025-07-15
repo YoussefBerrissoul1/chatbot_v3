@@ -5,3 +5,5 @@ faiss-cpu
 # textblob
 # textblob.download_corpora
 # pour la corection 
+flask
+flask-cors 
