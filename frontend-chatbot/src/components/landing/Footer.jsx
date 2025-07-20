@@ -166,7 +166,7 @@ const Footer = () => {
                 Recevez les dernières mises à jour sur notre assistant RH et les innovations Nestlé.
               </p>
             </div>
-            <div className="flex flex-col sm:flex-row gap-4">
+            {/* <div className="flex flex-col sm:flex-row gap-4">
               <input
                 type="email"
                 placeholder="Votre adresse email"
@@ -175,7 +175,7 @@ const Footer = () => {
               <button className="bg-red-600 hover:bg-red-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors duration-200 whitespace-nowrap">
                 S'abonner
               </button>
-            </div>
+            </div> */}
           </div>
         </div>
 
