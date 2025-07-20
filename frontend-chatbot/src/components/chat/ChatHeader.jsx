@@ -1,10 +1,11 @@
 import { useState } from 'react';
 import { Settings, Sun, Moon, Minimize2, X, ArrowLeft } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import botIcon from '../../assets/images/BotIcon.png';
 
 const ChatHeader = ({ settings, onSettingsChange }) => {
   const [showSettings, setShowSettings] = useState(false);
+  const navigate = useNavigate();
 
   const toggleTheme = () => {
     const newTheme = settings.theme === 'light' ? 'dark' : 'light';
@@ -88,16 +89,19 @@ const ChatHeader = ({ settings, onSettingsChange }) => {
             <Settings className="w-5 h-5 text-gray-600 dark:text-gray-400" />
           </button>
           
+          {/*
           <button
             className="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors hidden sm:block"
             aria-label="Réduire"
           >
             <Minimize2 className="w-5 h-5 text-gray-600 dark:text-gray-400" />
           </button>
+          */}
           
           <button
             className="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors hidden sm:block"
             aria-label="Fermer"
+            onClick={() => navigate('/')}
           >
             <X className="w-5 h-5 text-gray-600 dark:text-gray-400" />
           </button>

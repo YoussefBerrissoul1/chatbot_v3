@@ -89,7 +89,7 @@ const MessageInput = ({ onSendMessage, settings }) => {
               <button
                 key={index}
                 onClick={() => setMessage(suggestion)}
-                className="px-3 py-1 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded-full text-xs hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors"
+                className="px-3 py-1 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded-full text-xs hover:bg-red-500 hover:text-white dark:hover:bg-red-400 dark:hover:text-white transition-colors"
               >
                 {suggestion}
               </button>
