@@ -3,3 +3,280 @@
  * Running on http://127.0.0.1:5000
  * Running on http://192.168.11.134:5000
 2025-07-20 19:47:01,504 INFO [33mPress CTRL+C to quit[0m
+2025-07-21 08:39:12,394 INFO [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.181.24.88:5000
+2025-07-21 08:39:12,396 INFO [33mPress CTRL+C to quit[0m
+2025-07-21 08:42:29,775 INFO 127.0.0.1 - - [21/Jul/2025 08:42:29] "OPTIONS /chat HTTP/1.1" 200 -
+2025-07-21 08:42:35,540 INFO HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-21 08:42:42,399 INFO Question: Politique de télétravail | Réponse: 🤖 Chez Nestlé, notre politique de télétravail vise à offrir une flexibilité tout en maintenant la productivité et la collaboration. Elle est conçue pour s'adapter aux besoins des employés et de l'entreprise.
+
+1. **Éligibilité** : Les employés peuvent être éligibles au télétravail en fonction de leur rôle, de leurs responsabilités et de la faisabilité opérationnelle. Les managers évaluent chaque demande au cas par cas.
+
+2. **Fréquence** : Nous encourageons un équilibre entre le travail au bureau et à distance. Généralement, les employés peuvent télétravailler jusqu'à deux jours par semaine, selon les besoins de leur équipe et les exigences de leur poste.
+
+3. **Outils et soutien** : Nestlé fournit les outils numériques nécessaires pour assurer une communication efficace et un accès sécurisé aux ressources de l'entreprise. Nous offrons également un soutien technique pour résoudre les problèmes liés au télétravail.
+
+4. **Productivité et performance** : Les objectifs et les attentes de performance restent inchangés. Les employés doivent s'assurer que le télétravail ne compromet pas leur efficacité ou leur capacité à collaborer avec leurs collègues.
+
+Pour plus d'informations ou des questions spécifiques, veuillez contacter votre responsable ou le département des ressources humaines.
+2025-07-21 08:42:42,401 INFO 127.0.0.1 - - [21/Jul/2025 08:42:42] "POST /chat HTTP/1.1" 200 -
+2025-07-21 08:45:02,163 INFO 127.0.0.1 - - [21/Jul/2025 08:45:02] "OPTIONS /chat HTTP/1.1" 200 -
+2025-07-21 08:45:02,445 INFO Question: Quels sont les avantages sociaux chez Nestlé ? | Réponse: ✅ Assurance santé, retraite, et plus.
+2025-07-21 08:45:02,483 INFO 127.0.0.1 - - [21/Jul/2025 08:45:02] "POST /chat HTTP/1.1" 200 -
+2025-07-21 08:45:44,600 INFO 127.0.0.1 - - [21/Jul/2025 08:45:44] "OPTIONS /chat HTTP/1.1" 200 -
+2025-07-21 08:45:44,871 INFO Question: Comment puis-je donner mon avis sur les politiques ? | Réponse: ✅ Via des enquêtes ou discussions avec les RH.
+2025-07-21 08:45:44,872 INFO 127.0.0.1 - - [21/Jul/2025 08:45:44] "POST /chat HTTP/1.1" 200 -
+2025-07-21 08:46:31,749 INFO 127.0.0.1 - - [21/Jul/2025 08:46:31] "OPTIONS /chat HTTP/1.1" 200 -
+2025-07-21 08:46:32,009 INFO Question: Quelle est la politique de recrutement en période d'essai ? | Réponse: ✅ Possible mais nécessite validation hiérarchique et RH spécifique.
+2025-07-21 08:46:32,010 INFO 127.0.0.1 - - [21/Jul/2025 08:46:32] "POST /chat HTTP/1.1" 200 -
+2025-07-21 09:17:18,428 INFO [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.181.24.88:5000
+2025-07-21 09:17:18,472 INFO [33mPress CTRL+C to quit[0m
+2025-07-21 09:35:07,320 INFO [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.181.24.88:5000
+2025-07-21 09:35:07,321 INFO [33mPress CTRL+C to quit[0m
+2025-07-21 09:35:31,237 INFO 127.0.0.1 - - [21/Jul/2025 09:35:31] "[31m[1mGET /chat HTTP/1.1[0m" 405 -
+2025-07-21 09:35:31,539 INFO 127.0.0.1 - - [21/Jul/2025 09:35:31] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-07-21 09:40:45,856 INFO [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.181.24.88:5000
+2025-07-21 09:40:45,858 INFO [33mPress CTRL+C to quit[0m
+2025-07-21 09:41:16,402 INFO 10.181.24.91 - - [21/Jul/2025 09:41:16] "OPTIONS /chat HTTP/1.1" 200 -
+2025-07-21 09:41:20,580 INFO HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-21 09:41:24,175 INFO Question: Conge?? | Réponse: 🤖 Bonjour,
+
+Je comprends que vous ayez des questions concernant les congés chez Nestlé. Voici quelques informations générales :
+
+1. **Types de congés** : Nestlé offre divers types de congés, y compris les congés payés annuels, les congés pour raisons familiales, et les congés maladie.
+
+2. **Demande de congé** : Pour demander un congé, veuillez utiliser notre système interne de gestion des congés. Assurez-vous de soumettre votre demande à l'avance pour permettre une planification adéquate.
+
+3. **Politique de congés** : Les règles spécifiques concernant la durée des congés et les procédures peuvent varier en fonction de votre contrat et de votre ancienneté. Nous vous recommandons de consulter votre contrat de travail ou de contacter votre gestionnaire pour des détails précis.
+
+Si vous avez des questions spécifiques ou besoin de plus d'informations, n'hésitez pas à me contacter ou à vous référer au service des ressources humaines de votre site.
+
+Cordialement,
+
+[Votre Nom]  
+Assistant(e) RH  
+Nestlé
+2025-07-21 09:41:24,182 INFO 10.181.24.91 - - [21/Jul/2025 09:41:24] "POST /chat HTTP/1.1" 200 -
+2025-07-21 09:46:19,022 INFO 10.181.24.88 - - [21/Jul/2025 09:46:19] "OPTIONS /chat HTTP/1.1" 200 -
+2025-07-21 09:46:20,226 INFO HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-21 09:46:22,882 INFO Question: cc cv | Réponse: 🤖 Bonjour,
+
+Merci pour votre message. Pour soumettre votre CV à Nestlé, je vous invite à visiter notre site carrière à l'adresse suivante : [www.nestle.com/jobs](http://www.nestle.com/jobs). Vous y trouverez toutes les offres d'emploi disponibles ainsi que la possibilité de déposer une candidature spontanée.
+
+Assurez-vous que votre CV est à jour et qu'il reflète bien vos compétences et expériences. Si vous avez des questions sur le processus de candidature ou si vous rencontrez des difficultés techniques, n'hésitez pas à nous contacter. Nous sommes là pour vous aider.
+
+Nous vous remercions de votre intérêt pour Nestlé et vous souhaitons bonne chance dans votre recherche d'emploi.
+
+Cordialement,
+
+[Votre Prénom]
+Assistant RH
+Nestlé
+2025-07-21 09:46:22,886 INFO 10.181.24.88 - - [21/Jul/2025 09:46:22] "POST /chat HTTP/1.1" 200 -
+2025-07-22 11:17:13,663 INFO [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.181.24.85:5000
+2025-07-22 11:17:13,668 INFO [33mPress CTRL+C to quit[0m
+2025-07-22 11:20:07,098 INFO 10.181.24.85 - - [22/Jul/2025 11:20:07] "[33mGET / HTTP/1.1[0m" 404 -
+2025-07-22 11:20:07,368 INFO 10.181.24.85 - - [22/Jul/2025 11:20:07] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-07-22 11:20:16,255 INFO 127.0.0.1 - - [22/Jul/2025 11:20:16] "[33mGET / HTTP/1.1[0m" 404 -
+2025-07-22 11:20:16,538 INFO 127.0.0.1 - - [22/Jul/2025 11:20:16] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-07-22 11:22:19,158 INFO [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.181.24.85:5000
+2025-07-22 11:22:19,159 INFO [33mPress CTRL+C to quit[0m
+2025-07-22 11:22:19,228 INFO 127.0.0.1 - - [22/Jul/2025 11:22:19] "[33mGET / HTTP/1.1[0m" 404 -
+2025-07-22 11:25:47,883 INFO [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.181.24.85:5000
+2025-07-22 11:25:47,883 INFO [33mPress CTRL+C to quit[0m
+2025-07-22 11:35:17,032 INFO 127.0.0.1 - - [22/Jul/2025 11:35:17] "OPTIONS /chat HTTP/1.1" 200 -
+2025-07-22 11:35:29,038 INFO HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-22 11:35:31,189 INFO Question: cc | Réponse: 🤖 Bonjour,
+
+Merci de nous avoir contactés. Afin de mieux vous assister, pourriez-vous préciser votre demande ou la nature de votre requête ? Que ce soit une question sur le recrutement, les opportunités de carrière, ou d’autres sujets liés aux ressources humaines, je serai ravi de vous aider.
+
+Cordialement,
+
+[Votre Nom]  
+Assistant RH  
+Nestlé
+2025-07-22 11:35:31,191 INFO 127.0.0.1 - - [22/Jul/2025 11:35:31] "POST /chat HTTP/1.1" 200 -
+2025-07-22 11:36:28,032 INFO 127.0.0.1 - - [22/Jul/2025 11:36:28] "OPTIONS /chat HTTP/1.1" 200 -
+2025-07-22 11:36:32,793 INFO HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-22 11:36:37,982 INFO Question: horaires de traivai de neslte | Réponse: 🤖 Bonjour,
+
+Les horaires de travail chez Nestlé peuvent varier en fonction du poste, du site, et des réglementations locales. En général, les horaires standards sont du lundi au vendredi, de 9h00 à 18h00, avec une pause déjeuner. Toutefois, des aménagements peuvent être possibles selon les besoins opérationnels et les accords spécifiques.
+
+Si vous travaillez dans un centre de production ou dans un rôle nécessitant des horaires décalés, des équipes de nuit ou des rotations peuvent être mises en place. Nestlé valorise également l'équilibre entre vie professionnelle et personnelle, et propose diverses options comme le télétravail et des horaires flexibles, lorsque cela est compatible avec le poste.
+
+Pour des informations précises concernant votre situation ou un poste spécifique, je vous recommande de consulter votre supérieur hiérarchique ou le département des ressources humaines de votre site.
+
+Cordialement,
+
+[Votre Nom]
+Assistant RH, Nestlé
+2025-07-22 11:36:37,983 INFO 127.0.0.1 - - [22/Jul/2025 11:36:37] "POST /chat HTTP/1.1" 200 -
+2025-07-22 12:55:32,847 INFO [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.181.24.85:5000
+2025-07-22 12:55:32,848 INFO [33mPress CTRL+C to quit[0m
+2025-07-22 12:57:07,812 INFO 127.0.0.1 - - [22/Jul/2025 12:57:07] "OPTIONS /chat HTTP/1.1" 200 -
+2025-07-22 12:57:09,150 INFO Question: Comment quitter Nestlé après un congé parental ? | Réponse: ✅ Mêmes procédures que pour tout départ. Préavis calculé à partir de votre retour effectif.
+2025-07-22 12:57:09,155 INFO 127.0.0.1 - - [22/Jul/2025 12:57:09] "POST /chat HTTP/1.1" 200 -
+2025-07-22 12:57:27,176 INFO 127.0.0.1 - - [22/Jul/2025 12:57:27] "OPTIONS /chat HTTP/1.1" 200 -
+2025-07-22 12:57:30,755 INFO HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-22 12:57:35,629 INFO Question: Politique de télétravail | Réponse: 🤖 Chez Nestlé, nous valorisons la flexibilité et le bien-être de nos employés. Notre politique de télétravail vise à offrir un équilibre optimal entre vie professionnelle et personnelle.
+
+Le télétravail est possible pour certains postes, en accord avec les responsables hiérarchiques. Les employés sont encouragés à travailler à distance jusqu'à deux jours par semaine, selon les besoins opérationnels.
+
+Les outils technologiques nécessaires sont fournis pour assurer une communication et une collaboration efficaces. Les employés doivent respecter les normes de sécurité et de confidentialité des données.
+
+Des réunions régulières sont planifiées pour maintenir une cohésion d'équipe et garantir le suivi des objectifs professionnels. Des formations sont également disponibles pour aider les employés à s'adapter à ce mode de travail.
+
+Toute demande spécifique doit être discutée avec le manager direct pour assurer une organisation optimale des tâches et responsabilités. 
+
+Nous restons engagés à soutenir nos employés tout en garantissant la productivité et la satisfaction au travail. N'hésitez pas à nous contacter pour plus de détails ou pour toute question supplémentaire.
+2025-07-22 12:57:35,632 INFO 127.0.0.1 - - [22/Jul/2025 12:57:35] "POST /chat HTTP/1.1" 200 -
+2025-07-22 12:57:59,425 INFO 127.0.0.1 - - [22/Jul/2025 12:57:59] "OPTIONS /chat HTTP/1.1" 200 -
+2025-07-22 12:57:59,852 INFO Question: Comment quitter Nestlé après un congé parental ? | Réponse: ✅ Mêmes procédures que pour tout départ. Préavis calculé à partir de votre retour effectif.
+2025-07-22 12:57:59,858 INFO 127.0.0.1 - - [22/Jul/2025 12:57:59] "POST /chat HTTP/1.1" 200 -
+2025-07-22 12:58:12,023 INFO 127.0.0.1 - - [22/Jul/2025 12:58:12] "OPTIONS /chat HTTP/1.1" 200 -
+2025-07-22 12:58:15,984 INFO HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-22 12:58:21,342 INFO Question: Politique de télétravail | Réponse: 🤖 Bonjour,
+
+Chez Nestlé, notre politique de télétravail vise à offrir flexibilité et efficacité à nos employés, tout en maintenant un haut niveau de productivité. Voici les principaux points de notre politique :
+
+1. **Éligibilité** : Tous les employés peuvent demander le télétravail, sous réserve de l'approbation de leur responsable, basé sur la nature de leur poste et les besoins de l'équipe.
+
+2. **Fréquence** : Le télétravail peut être effectué plusieurs jours par semaine, à condition que les besoins de l'entreprise et la collaboration d'équipe soient respectés.
+
+3. **Équipement** : Nestlé fournit l'équipement nécessaire pour travailler efficacement depuis chez soi, y compris accès à des outils numériques et support technique.
+
+4. **Communication** : Une communication régulière avec l'équipe et le manager est essentielle. Les réunions virtuelles et les outils collaboratifs sont encouragés.
+
+5. **Performance** : Les résultats et la productivité sont évalués sur la base d'objectifs clairement définis, indépendamment du lieu de travail.
+
+Pour plus de détails ou pour commencer une demande de télétravail, je vous invite à consulter notre intranet ou à contacter votre responsable direct.
+
+Cordialement,
+
+[Votre Nom]  
+HR Assistant, Nestlé
+2025-07-22 12:58:21,346 INFO 127.0.0.1 - - [22/Jul/2025 12:58:21] "POST /chat HTTP/1.1" 200 -
+2025-07-22 13:11:52,909 INFO 10.181.24.87 - - [22/Jul/2025 13:11:52] "OPTIONS /chat HTTP/1.1" 200 -
+2025-07-22 13:11:54,065 INFO HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-22 13:11:56,308 INFO Question: Cc cava | Réponse: 🤖 Bonjour,
+
+Merci pour votre message. Comment puis-je vous aider aujourd'hui chez Nestlé? Si vous avez des questions concernant nos offres d'emploi, le processus de recrutement, ou toute autre demande liée aux ressources humaines, n'hésitez pas à me le faire savoir.
+
+Cordialement,
+
+[Votre Nom]  
+Assistant RH  
+Nestlé
+2025-07-22 13:11:56,309 INFO 10.181.24.87 - - [22/Jul/2025 13:11:56] "POST /chat HTTP/1.1" 200 -
+2025-07-24 13:55:57,415 INFO [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.181.24.81:5000
+2025-07-24 13:55:57,418 INFO [33mPress CTRL+C to quit[0m
+2025-07-24 13:56:49,966 INFO 127.0.0.1 - - [24/Jul/2025 13:56:49] "OPTIONS /chat HTTP/1.1" 200 -
+2025-07-24 13:56:55,098 INFO HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-24 13:56:56,229 INFO Question: cc cava | Réponse: 🤖 Bonjour,
+
+Je vous remercie pour votre message. Comment puis-je vous aider aujourd'hui ? Si vous avez des questions concernant les opportunités de carrière chez Nestlé, nos processus de recrutement ou toute autre information liée aux ressources humaines, n'hésitez pas à me le faire savoir. Je suis ici pour vous aider.
+
+Cordialement,
+
+[Votre Nom]  
+Assistant RH  
+Nestlé
+2025-07-24 13:56:56,230 INFO 127.0.0.1 - - [24/Jul/2025 13:56:56] "POST /chat HTTP/1.1" 200 -
+2025-07-24 13:57:32,423 INFO 127.0.0.1 - - [24/Jul/2025 13:57:32] "OPTIONS /chat HTTP/1.1" 200 -
+2025-07-24 13:57:33,675 INFO HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-24 13:57:35,334 INFO Question: 🎤 Message vocal envoyé | Réponse: 🤖 Bonjour,
+
+Merci de nous avoir contactés. Malheureusement, je ne suis pas en mesure de traiter les messages vocaux directement via cet outil. Je vous recommande d'envoyer votre demande par écrit via notre formulaire de contact sur le site officiel de Nestlé ou par email à notre service des ressources humaines à l'adresse appropriée.
+
+Si vous avez des questions spécifiques ou besoin d'informations supplémentaires, n'hésitez pas à me les poser ici, et je ferai de mon mieux pour vous aider dans les plus brefs délais.
+
+Cordialement,
+
+L'équipe des Ressources Humaines de Nestlé
+2025-07-24 13:57:35,336 INFO 127.0.0.1 - - [24/Jul/2025 13:57:35] "POST /chat HTTP/1.1" 200 -
+2025-07-28 19:54:43,484 INFO [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.108:5000
+2025-07-28 19:54:43,486 INFO [33mPress CTRL+C to quit[0m
+2025-07-28 19:55:59,019 INFO 127.0.0.1 - - [28/Jul/2025 19:55:59] "OPTIONS /chat HTTP/1.1" 200 -
+2025-07-28 19:56:02,208 INFO Retrying request to /chat/completions in 0.489495 seconds
+2025-07-28 19:56:02,700 INFO Retrying request to /chat/completions in 0.887884 seconds
+2025-07-28 19:56:03,590 INFO Question: Consulter mes congés | Réponse: ❌ Service temporairement indisponible. Veuillez réessayer plus tard.
+2025-07-28 19:56:03,593 INFO 127.0.0.1 - - [28/Jul/2025 19:56:03] "POST /chat HTTP/1.1" 200 -
+2025-07-28 19:56:55,874 INFO 127.0.0.1 - - [28/Jul/2025 19:56:55] "OPTIONS /chat HTTP/1.1" 200 -
+2025-07-28 19:56:56,227 INFO Retrying request to /chat/completions in 0.494910 seconds
+2025-07-28 19:56:56,729 INFO Retrying request to /chat/completions in 0.922185 seconds
+2025-07-28 19:56:57,655 INFO Question: cc comment  allez vous | Réponse: ❌ Service temporairement indisponible. Veuillez réessayer plus tard.
+2025-07-28 19:56:57,656 INFO 127.0.0.1 - - [28/Jul/2025 19:56:57] "POST /chat HTTP/1.1" 200 -
+2025-07-28 19:57:47,573 INFO 127.0.0.1 - - [28/Jul/2025 19:57:47] "OPTIONS /chat HTTP/1.1" 200 -
+2025-07-28 19:57:47,835 INFO Question: Puis-je travailler pour un concurrent immédiatement ? | Réponse: ✅ Dépend de votre clause de non-concurrence. À défaut, liberté immédiate sauf pour postes stratégiques.
+2025-07-28 19:57:47,838 INFO 127.0.0.1 - - [28/Jul/2025 19:57:47] "POST /chat HTTP/1.1" 200 -
+2025-07-28 19:57:57,764 INFO 127.0.0.1 - - [28/Jul/2025 19:57:57] "OPTIONS /chat HTTP/1.1" 200 -
+2025-07-28 19:57:59,746 INFO HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-28 19:58:07,149 INFO Question: congés | Réponse: 🤖 Bonjour,
+
+Merci de nous contacter au sujet des congés. Chez Nestlé, nous accordons une grande importance à l'équilibre entre vie professionnelle et personnelle de nos employés. Nos politiques de congés incluent :
+
+1. **Congés annuels** : Chaque employé a droit à un certain nombre de jours de congés payés par an, qui varie selon le pays et l'ancienneté.
+
+2. **Congés maladie** : Des jours de congés maladie sont disponibles en cas de nécessité. Un certificat médical peut être requis.
+
+3. **Congé maternité/paternité** : Nous offrons des congés de maternité et de paternité conformes aux lois locales pour soutenir les nouveaux parents.
+
+4. **Congés spéciaux** : Selon les circonstances, tels que le mariage ou le décès d'un proche, des congés spéciaux peuvent être accordés.
+
+Pour obtenir des informations spécifiques concernant votre situation, je vous recommande de consulter notre intranet ou de contacter le service des ressources humaines de votre unité locale. Ils pourront vous fournir des détails adaptés à votre situation personnelle.
+
+N'hésitez pas à nous contacter si vous avez d'autres questions.
+
+Cordialement,
+
+[Votre Nom]
+Service des Ressources Humaines
+Nestlé
+2025-07-28 19:58:07,153 INFO 127.0.0.1 - - [28/Jul/2025 19:58:07] "POST /chat HTTP/1.1" 200 -
+2025-07-29 08:56:11,299 INFO [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.181.24.78:5000
+2025-07-29 08:56:11,300 INFO [33mPress CTRL+C to quit[0m
+2025-07-29 09:39:56,836 INFO 127.0.0.1 - - [29/Jul/2025 09:39:56] "OPTIONS /chat HTTP/1.1" 200 -
+2025-07-29 09:40:01,194 INFO HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-29 09:40:01,480 INFO Question: Bonjour | Réponse: 🤖 Bonjour, comment puis-je vous aider aujourd'hui chez Nestlé ?
+2025-07-29 09:40:01,482 INFO 127.0.0.1 - - [29/Jul/2025 09:40:01] "POST /chat HTTP/1.1" 200 -
+2025-07-31 09:37:22,844 INFO [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.181.24.92:5000
+2025-07-31 09:37:22,846 INFO [33mPress CTRL+C to quit[0m
+2025-07-31 09:38:44,904 INFO 127.0.0.1 - - [31/Jul/2025 09:38:44] "OPTIONS /chat HTTP/1.1" 200 -
+2025-07-31 09:38:49,466 INFO HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-31 09:38:49,545 INFO Question: bonjour | Réponse: 🤖 Bonjour, comment puis-je vous aider aujourd'hui ?
+2025-07-31 09:38:49,546 INFO 127.0.0.1 - - [31/Jul/2025 09:38:49] "POST /chat HTTP/1.1" 200 -

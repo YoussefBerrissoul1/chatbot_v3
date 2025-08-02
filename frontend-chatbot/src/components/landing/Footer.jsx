@@ -33,15 +33,15 @@ const Footer = () => {
   };
 
   const socialLinks = [
-    { name: 'LinkedIn', icon: Linkedin, href: 'https://www.linkedin.com/company/nestle' },
+    { name: 'LinkedIn', icon: Linkedin, href: 'https://www.linkedin.com/company/nestle-s-a-/' },
     { name: 'Twitter', icon: Twitter, href: 'https://twitter.com/nestle' },
     { name: 'Facebook', icon: Facebook, href: 'https://www.facebook.com/Nestle' }
   ];
 
   const contactInfo = [
     { icon: Mail, text: 'rh-support@nestle.com', href: 'mailto:rh-support@nestle.com' },
-    { icon: Phone, text: '+33 1 23 45 67 89', href: 'tel:+33123456789' },
-    { icon: MapPin, text: 'Noisiel, France', href: '#' }
+    { icon: Phone, text: '+212 5 20 15 88 00', href: 'tel:+212520158800' },
+    { icon: MapPin, text: 'El Jadida, Morocco', href: '#' }
   ];
 
   return (
